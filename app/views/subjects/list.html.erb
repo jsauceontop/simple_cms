@@ -1,0 +1,13 @@
+
+<p>List of all subjects</p>
+<table>
+<% @subjects.each do |subject| %>
+<tr>
+	<td><%=subject.name %></td>
+	<td><%= link_to("show", {:action => 'show', :id=>subject.id}) %></td>
+	<td><%= link_to("edit", {:action => 'edit', :id=>subject.id}) %></td>
+	<td><%= link_to("delete", {:action => 'delete', :id=>subject.id}) %></td>
+</tr>
+<% end %>
+</table>
+<%= link_to("new", {:action => 'new'}) %>
