@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+layout 'admin'
 
 def list
 	@subjects = Subject.order("subjects.name ASC")
