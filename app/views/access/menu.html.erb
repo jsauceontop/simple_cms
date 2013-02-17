@@ -1,0 +1,7 @@
+<% @page_title = "Admin Menu" %>
+
+<h1>Admin Menu</h1>
+Logged in as: <%=session[:name] %>
+<ul>
+	<li><%= link_to("Logout", :action => 'logout') %></li>
+</ul>
