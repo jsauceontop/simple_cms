@@ -1,10 +1,5 @@
 <p>New</p>
 <%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
-<table>
-	<tr>
-		<th>Name</th>
-		<td><%=f.text_field(:name) %></td>
-	</tr>
-</table>
+<%= render :partial => "partial", :locals => {:f => f} %>
 <%=submit_tag("Create Subject") %>
 <% end %>
