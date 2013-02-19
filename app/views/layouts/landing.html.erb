@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SimpleCms | <%= @page_title %></title>
+  <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body class="wsite-theme-light landing-page">
+<div id="wrapper">
+	<div id="wrap">
+		<div id="wrap-in">
+			<div id="header-wrap">
+				<div id="page">
+					<div id="header-container">
+						<table id="header">
+							<tr>
+								<td id="logo">
+									<span class="wsite-logo">
+										<a href="/">
+											<span id="wsite-title"><%= @page_title %></span>
+										</a>
+									</span>
+								</td>
+								<td id="header-right"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div id="main-wrap">
+				<div id="nav-wrap">
+					<div id="page">
+						<div id="topnav"><!--{menu}-->
+							<%= render :partial => "nav" %>
+							<div style="clear:both"></div>
+						</div>
+					</div>
+				</div>
+				<div id="page">
+					<div id="main-bot">
+						<div id="main-inner">
+							<div id="main">
+								<div id="banner">
+									<div id="banner-outer">
+										<div id="banner-inner">
+											<div id="bannerleft">
+												<div class="wsite-header"></div>
+											</div>
+											<div id="bannerright">
+												<h2></h2><!--{headline:text global="false"}-->
+												<p></p><!--{headline-paragraph:text global="false"}-->
+												<!--{action:button global="false"}-->
+											</div>
+											<div style="clear:both;"></div>
+										</div>
+									</div>
+								</div>
+								<div id="content"><%= yield %></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="footer-wrap">
+	<div id="page">
+		<div id="footer" style="display: none;"></div><!--{footer}-->
+	</div>
+</div>
+</body>
+</html>
